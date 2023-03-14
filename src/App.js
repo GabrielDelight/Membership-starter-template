@@ -1,36 +1,6 @@
 import "./App.css";
-import { useParallax } from "react-scroll-parallax";
 
 const App = () => {
-
-  // Rotate Y axis
-  const rotateYAxis = useParallax({
-    rotateY: [0, 360],
-  });
-
-  const ScaleXAxis = useParallax({
-    scaleX: [0, 3, "easeInQuad"],
-  });
-
-
-  const parallaxRotateY2 = useParallax({
-    rotateY: [0, 360],
-  });
-
-  const parallaxRotateY3 = useParallax({
-    rotateY: [0, 360],
-  });
-
-  const easingUsingPresetLeft = useParallax({
-    easing: "easeOutQuad",
-    translateX: [-340, 100],
-  });
-
-  const easingUsingPresetRight = useParallax({
-    easing: [1, -0.75, 0.5, 1.34],
-    translateX: [0, -260],
-    translateY: [1100],
-  });
 
   return (
     <div>
@@ -48,17 +18,17 @@ const App = () => {
       </header>
       <section className="bg-container">
         <img
-          ref={rotateYAxis.ref}
+        
           src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         />
         <div className="absolute-text">
-          <h1 ref={easingUsingPresetLeft.ref}>MEMBERSHIP WEBSITE</h1>
-          <h2 ref={easingUsingPresetRight.ref}>For members only non profitable</h2>
+          <h1>MEMBERSHIP WEBSITE</h1>
+          <h2>For members only non profitable</h2>
         </div>
       </section>
       <br />
 
-      <section className="card-container" ref={ScaleXAxis.ref}>
+      <section className="card-container">
         sfdfdf
         <div className="card">
           <img src="https://images.pexels.com/photos/2422294/pexels-photo-2422294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
@@ -74,11 +44,11 @@ const App = () => {
       <br />
       <br />
       <section className="card-container">
-        <div className="card" ref={parallaxRotateY2.ref}>
+        <div className="card">
           <img src="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=800" />
         </div>
 
-        <div ref={parallaxRotateY3.ref} className="card">
+        <div className="card">
           <img src="https://images.pexels.com/photos/1181438/pexels-photo-1181438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
         </div>
       </section>
